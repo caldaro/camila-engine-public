@@ -1,26 +1,13 @@
 services:
-  - type: worker
-    name: camila-telegram-bridge
+  - type: web
+    name: camila-os-core
     env: python
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "python tools/telegram-camila-bridge.py"
+    startCommand: "bash start.sh"
     envVars:
       - key: TELEGRAM_BOT_TOKEN
         sync: false
       - key: TELEGRAM_OC_DIR
         value: "/opt/render/project/src"
-      - key: TELEGRAM_OC_PORT
-        value: "4096"
-      # - key: TELEGRAM_OC_BIN
-      #   value: "/usr/local/bin/opencode" # Configurar ruta real en Linux
-
-  - type: web
-    name: camila-voice-server
-    env: python
-    buildCommand: "pip install -r requirements.txt"
-    startCommand: "python camila-android-client/server/camila_ws_server.py"
-    envVars:
       - key: CAMILA_OC_DIR
         value: "/opt/render/project/src"
-      - key: CAMILA_PORT
-        value: "8765"
