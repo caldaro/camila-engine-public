@@ -1,0 +1,26 @@
+﻿# Ignorar todo por defecto
+/*
+
+# Excepciones: trackear el sistema, agentes y herramientas (Camila/Adam)
+!/Taxi-Marketing-OS/
+!/.agents/
+!/.opencode/
+!/tools/
+!/camila-mcp-server/
+!/camila-android-client/
+!/AGENTS.md
+!/.gitignore
+
+# Dentro de las carpetas permitidas, ignorar basura
+**/.env
+**/node_modules/
+**/__pycache__/
+**/.venv/
+**/build/
+**/.idea/
+**/.gradle/
+**/local.properties
+"*.apk"
+"*.pyc"
+!/requirements.txt
+!/render.yaml
